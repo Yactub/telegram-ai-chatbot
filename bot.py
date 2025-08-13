@@ -3,7 +3,7 @@
 """
 Telegram AI Bot — multilingual, auto-replies + AI fallback, context, TTS, SQLite
 Author: Alouache Yacine
-GitHub: https://github.com/Yactub (ضع رابط مشروعك)
+GitHub: https://github.com/Yactub/telegram-ai-chatbot
 License: MIT
 
 Notes:
@@ -23,7 +23,7 @@ from typing import List, Dict, Tuple, Optional
 import requests
 from dotenv import load_dotenv
 from gtts import gTTS
-from langdetect import detect, DetectorFactory  # للكشف التلقائي عن اللغة (بسيط)
+from langdetect import detect, DetectorFactory  
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputFile
 from telegram.ext import (
     ApplicationBuilder,
@@ -37,7 +37,7 @@ from telegram.error import TelegramError
 
 # --------- General Settings ---------
 
-DetectorFactory.seed = 0  # لتثبيت نتيجة langdetect بين التشغيلات
+DetectorFactory.seed = 0  
 load_dotenv()
 
 TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN", "")
@@ -437,3 +437,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
